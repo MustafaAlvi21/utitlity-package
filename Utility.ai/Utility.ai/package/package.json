@@ -1,0 +1,25 @@
+{
+  "name": "utitlity-beta",
+  "version": "1.0.0",
+  "description": "utitlity.ai beta version for testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MustafaAlvi21/utitlity-package.git"
+  },
+  "keywords": [
+    "utitlity"
+  ],
+  "author": "MustafaAlvi21",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MustafaAlvi21/utitlity-package/issues"
+  },
+  "homepage": "https://github.com/MustafaAlvi21/utitlity-package#readme",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
