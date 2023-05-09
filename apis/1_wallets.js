@@ -1,4 +1,4 @@
-const { GET_RESPONSE, POST_RESPONSE, PUT_RESPONSE, DELETE_RESPONSE } = require("./constants");
+const { GET_RESPONSE, POST_RESPONSE, PUT_RESPONSE, DELETE_RESPONSE } = require("../constants");
 
 
 
@@ -8,12 +8,13 @@ const { GET_RESPONSE, POST_RESPONSE, PUT_RESPONSE, DELETE_RESPONSE } = require("
 * Get Nfts For Wallet
 */
 async function nftforwallet(wallet_address, network_id, contract_address = null, page = null, limit = null) {
+    const url = `wallets/${wallet_address}/nfts`;
+    let query = `?network_id=${network_id}`;
+
     if (contract_address != null && contract_address != "") query += `&contract_address=${contract_address}`;
     if (page != null && page != "") query += `&page=${page}`;
     if (limit != null && limit != "") query += `&limit=${limit}`;
 
-    const url = `wallets/${wallet_address}/nfts`;
-    let query = `?network_id=${network_id}`;
 
     return await GET_RESPONSE(url + query)
 }
@@ -25,12 +26,12 @@ async function nftforwallet(wallet_address, network_id, contract_address = null,
 * Get Sfts For Wallet
 */
 async function sftforwallet(wallet_address, network_id, contract_address = null, page = null, limit = null) {
+    const url = `wallets/${wallet_address}/sfts`;
+    let query = `?network_id=${network_id}`;
+
     if (contract_address != null && contract_address != "") query += `&contract_address=${contract_address}`;
     if (page != null && page != "") query += `&page=${page}`;
     if (limit != null && limit != "") query += `&limit=${limit}`;
-
-    const url = `wallets/${wallet_address}/sfts`;
-    let query = `?network_id=${network_id}`;
 
     return await GET_RESPONSE(url + query)
 }
@@ -42,12 +43,12 @@ async function sftforwallet(wallet_address, network_id, contract_address = null,
 * Get Tokens For Wallet
 */
 async function tokensforwallet(wallet_address, network_id, contract_address = null, page = null, limit = null) {
+    const url = `wallets/${wallet_address}/tokens`;
+    let query = `?network_id=${network_id}`;
+
     if (contract_address != null && contract_address != "") query += `&contract_address=${contract_address}`;
     if (page != null && page != "") query += `&page=${page}`;
     if (limit != null && limit != "") query += `&limit=${limit}`;
-
-    const url = `wallets/${wallet_address}/tokens`;
-    let query = `?network_id=${network_id}`;
 
     return await GET_RESPONSE(url + query)
 }

@@ -9,7 +9,7 @@ const {
     updatewallet,
     deletewallet,
     signature
-} = require("./wallets");
+} = require("./apis/1_wallets");
 
 
 
@@ -23,39 +23,39 @@ class Utility {
         axios.defaults.headers.common['X-API-Key'] = `${this.apikey}`;
     }
 
-    __nftforwallet(...params) {
+    nftForWallet(...params) {
         nftforwallet(...params)
     }
 
-    __sftforwallet(...params) {
+    sftForWallet(...params) {
         sftforwallet(...params)
     }
 
-    __tokensforwallet(...params) {
+    tokensForWallet(...params) {
         tokensforwallet(...params)
     }
 
-    __getwallet(...params) {
+    getWallet(...params) {
         getwallet(...params)
     }
 
-    __getwallets(...params) {
+    getWallets(...params) {
         getwallets(...params)
     }
 
-    __createwallet(...params) {
+    createWallet(...params) {
         createwallet(...params)
     }
 
-    __updatewallet(...params) {
+    updateWallet(...params) {
         updatewallet(...params)
     }
 
-    __deletewallet(...params) {
+    deleteWallet(...params) {
         deletewallet(...params)
     }
 
-    __signature(...params) {
+    getSignature(...params) {
         signature(...params)
     }
 
@@ -66,15 +66,15 @@ class Utility {
 // const myUtility = new Utility("588defcd-92ad-4891-93c8-ddd5bf41ea9d");
 
 // myUtility.init();
-// myUtility.__nftforwallet("0xf7f9e7be5971dd17563dcbaa745975c0fb919669", 1);
-// myUtility.__sftforwallet("0xf7f9e7be5971dd17563dcbaa745975c0fb919669", 1);
-// myUtility.__tokensforwallet("0xf7f9e7be5971dd17563dcbaa745975c0fb919669", 1);
-// myUtility.__getwallet("address");
-// myUtility.__getwallets(1);
-// myUtility.__createwallet(1, "test-1");
-// myUtility.__updatewallet("42e9e745-fb71-4515-8f0a-db43ba8ec7fe", "test-420", true);
-// myUtility.__deletewallet("42e9e745-fb71-4515-8f0a-db43ba8ec7fe");
-// myUtility.__signature("0xda8d71c98b395d6ab86959bd64ece07cd2274411", "hello");
+// myUtility.nftForWallet("0xf7f9e7be5971dd17563dcbaa745975c0fb919669", 1);
+// myUtility.sftForWallet("0xf7f9e7be5971dd17563dcbaa745975c0fb919669", 1);
+// myUtility.tokensForWallet("0xf7f9e7be5971dd17563dcbaa745975c0fb919669", 1);
+// myUtility.getWallet("address");
+// myUtility.getWallets(1);
+// myUtility.createWallet(1, "test-1");
+// myUtility.updateWallet("42e9e745-fb71-4515-8f0a-db43ba8ec7fe", "test-420", true);
+// myUtility.deleteWallet("42e9e745-fb71-4515-8f0a-db43ba8ec7fe");
+// myUtility.getSignature("0xda8d71c98b395d6ab86959bd64ece07cd2274411", "hello");
 
 
 module.exports = Utility;
