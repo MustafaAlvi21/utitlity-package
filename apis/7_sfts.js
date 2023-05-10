@@ -7,7 +7,7 @@ const { GET_RESPONSE, POST_RESPONSE, PUT_RESPONSE, DELETE_RESPONSE } = require("
 * /sfts/resync
 * Resync Sfts
 */
-async function resyncnfts(address = null, network = null, owner = null, token_ids = null) {
+async function updateresyncnfts(address = null, network = null, owner = null, token_ids = null) {
     if (address == null || address == "") return "address is required";
     if (network == null || network == "") return "network is required";
     if (network == 0) return "network should be greater than zero";
@@ -30,6 +30,5 @@ async function resyncnfts(address = null, network = null, owner = null, token_id
 
 
 module.exports = {
-    getnfts,
-    resyncnfts
+    updateresyncnfts
 }

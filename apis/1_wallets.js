@@ -88,8 +88,8 @@ async function getwallets(network_id, page, limit) {
 * Create Wallet
 */
 async function createwallet(network_id = null, name = null) {
-    if (network_id == null || network_id == "") return console.log("network_id required");
-    if (name == null || name == "") return console.log("name required");
+    if (network_id == null || network_id == "") return "network_id required";
+    if (name == null || name == "") return "name required";
 
     const url = `wallets`;
     let body = {
@@ -107,9 +107,9 @@ async function createwallet(network_id = null, name = null) {
 * Update Wallet
 */
 async function updatewallet(wallet_id = null, name = null, is_forwarder = null) {
-    if (wallet_id == null || wallet_id == "") return console.log("wallet_id required");
-    if (name == null || name == "") return console.log("name required");
-    if ((is_forwarder == null || is_forwarder == "")) return console.log("is_forwarder required");
+    if (wallet_id == null || wallet_id == "") return "wallet_id required";
+    if (name == null || name == "") return "name required";
+    if ((is_forwarder == null || is_forwarder == "")) return "is_forwarder required";
 
     const url = `wallets/${wallet_id}`;
     let body = {
@@ -127,7 +127,7 @@ async function updatewallet(wallet_id = null, name = null, is_forwarder = null) 
 * Delete Wallet
 */
 async function deletewallet(wallet_id = null) {
-    if (wallet_id == null || wallet_id == "") return console.log("wallet_id required");
+    if (wallet_id == null || wallet_id == "") return "wallet_id required";
 
     const url = `wallets/${wallet_id}`;
     return await DELETE_RESPONSE(url)
@@ -140,8 +140,8 @@ async function deletewallet(wallet_id = null) {
 * Sign Message
 */
 async function signature(wallet_address = null, message = null) {
-    if (wallet_address == null || wallet_address == "") return console.log("wallet_address required");
-    if (message == null || message == "") return console.log("message required");
+    if (wallet_address == null || wallet_address == "") return "wallet_address required";
+    if (message == null || message == "") return "message required";
 
     const url = `wallets/${wallet_address}/signature`;
     let body = { message };    
