@@ -19,7 +19,7 @@ async function updateresyncnfts(address = null, network = null, owner = null, to
         address,
         network,
         owner,
-        token_id
+        token_ids
       }
 
     const url = `sfts/resync`;
