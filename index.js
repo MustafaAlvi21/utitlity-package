@@ -1,20 +1,16 @@
 const axios = require("axios");
-const { resynctokens } = require("./apis/3_tokens");
-const { updateresyncnfts } = require("./apis/7_sfts");
-const { getnfts, resyncnfts } = require("./apis/6_nfts");
-const { resynccontractmetadata, getcontractnfts } = require("./apis/4_contracts");
-const { readtx, createtx, createmetatx, getsingletx, gettxofwallet, gettxstatus } = require("./apis/2_transactions");
-const { nftforwallet, sftforwallet, tokensforwallet, getwallet, getwallets, createwallet, updatewallet, deletewallet, signature } = require("./apis/1_wallets");
-const { getnamespaces, createnamespaces, getmetadataitems, updatemetadataitem, createmetadataitem, getsinglemetadataitem, deletemetadataitem } = require("./apis/5_metadata");
-
-
+const { resynctokens } = require("./apis/tokens");
+const { updateresyncnfts } = require("./apis/sfts");
+const { getnfts, resyncnfts } = require("./apis/nfts");
+const { resynccontractmetadata, getcontractnfts } = require("./apis/contracts");
+const { readtx, createtx, createmetatx, getsingletx, gettxofwallet, gettxstatus } = require("./apis/transactions");
+const { nftforwallet, sftforwallet, tokensforwallet, getwallet, getwallets, createwallet, updatewallet, deletewallet, signature } = require("./apis/wallets");
+const { getnamespaces, createnamespaces, getmetadataitems, updatemetadataitem, createmetadataitem, getsinglemetadataitem, deletemetadataitem } = require("./apis/metadata");
 
 
 
 class Utility {
-    constructor(apikey) {
-        this.apikey = apikey;
-    }
+    constructor(apikey) { this.apikey = apikey; }
 
     init() {
         axios.defaults.headers.common['accept'] = `'application/json'`;

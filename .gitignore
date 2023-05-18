@@ -7,3 +7,6 @@ node_modules
 
 .git-office
 /.git-office
+
+.git-public
+/.git-public

@@ -2,3 +2,11 @@
 ./node_modules
 node_modules
 
+.git-my
+/.git-my
+
+.git-office
+/.git-office
+
+.git-public
+/.git-public
